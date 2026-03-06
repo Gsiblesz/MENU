@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Accesos PDT</title>
+  <style>
+    :root {
+      --page-bg: #e7ebf0;
+      --hero-bg: #0b5674;
+      --hero-text: #f8fafc;
+      --hero-muted: #bdd7e5;
+      --card-bg: #f3f5f7;
+      --card-border: #d9dee6;
+      --title: #0f172a;
+      --text: #475569;
+      --chip: #0891b2;
+      --button: #0b6182;
+      --button-hover: #0a4f6a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, var(--hero-bg) 0 290px, var(--page-bg) 290px 100%);
+      color: var(--title);
+    }
+
+    .wrapper {
+      width: min(1100px, 100% - 2rem);
+      margin: 0 auto;
+      padding: 22px 0 38px;
+    }
+
+    .hero {
+      color: var(--hero-text);
+      padding: 8px 10px 20px;
+    }
+
+    .hero .eyebrow {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.94rem;
+      color: var(--hero-muted);
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      margin: 10px 0 0;
+      font-size: clamp(2rem, 4.8vw, 3.75rem);
+      line-height: 1.08;
+      max-width: 900px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      margin: 12px 0 0;
+      color: var(--hero-muted);
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+
+    .list {
+      margin-top: 18px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 24px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    }
+
+    .card .tag {
+      margin: 0 0 8px;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 800;
+      color: var(--chip);
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: clamp(1.3rem, 2.2vw, 2rem);
+      line-height: 1.2;
+      color: var(--title);
+    }
+
+    .card p {
+      margin: 8px 0 0;
+      color: var(--text);
+      font-size: 1.02rem;
+      max-width: 720px;
+    }
+
+    .btn {
+      border: 0;
+      background: var(--button);
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.02rem;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 999px;
+      white-space: nowrap;
+      min-width: 190px;
+      text-align: center;
+      transition: transform 0.16s ease, background 0.2s ease;
+      box-shadow: 0 8px 18px rgba(11, 97, 130, 0.24);
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      background: var(--button-hover);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .footer {
+      padding: 10px;
+      color: #5b6b7c;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 900px) {
+      .card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="hero">
+      <p class="eyebrow">Panel de accesos</p>
+      <h1>Bienvenido al menú de los formularios de solicitudes y registros de EL CENTRO</h1>
+    </header>
+
+    <main class="list" aria-label="Menú de formularios">
+      <article class="card">
+        <div>
+          <p class="tag">Inventarios</p>
+          <h2>Inventario de Producto Terminado</h2>
+          <p>Accede al formulario principal para registrar inventarios de producto terminado.</p>
+        </div>
+        <a class="btn" href="https://inv-produ-terminado.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir Formulario</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <p class="tag">Catálogo general</p>
+          <h2>Solicitudes y Registros La Tata</h2>
+          <p>Concentrador web para acceder a los formularios de solicitudes y registros de La Tata.</p>
+        </div>
+        <a class="btn" href="https://la-tata-dela-libertad.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir Portal</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <p class="tag">Producción</p>
+          <h2>Empaquetado y Merma PDT</h2>
+          <p>Registra la información diaria relacionada con el proceso de empaque y los niveles de merma.</p>
+        </div>
+        <a class="btn" href="https://empaquemerma.vercel.app/menu.html" target="_blank" rel="noopener noreferrer">Abrir Portal</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <p class="tag">Producción</p>
+          <h2>Formulario de Merma PDT y La Tata</h2>
+          <p>Formulario consolidado para registrar mermas operativas de PDT y La Tata.</p>
+        </div>
+        <a class="btn" href="https://merma-iota.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir Formulario</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <p class="tag">Operaciones</p>
+          <h2>Almacen09</h2>
+          <p>Acceso al formulario operativo del área de almacén para registros diarios.</p>
+        </div>
+        <a class="btn" href="https://almac-n-09.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir Formulario</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <p class="tag">Operativa</p>
+          <h2>Pre-Operativa</h2>
+          <p>Formulario para el control pre-operativo y validación previa al inicio de jornada.</p>
+        </div>
+        <a class="btn" href="https://pre-operativ-afrontend.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir Formulario</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <p class="tag">Producción diaria</p>
+          <h2>Producción Diaria</h2>
+          <p>Registro diario de producción para seguimiento de metas y rendimiento por jornada.</p>
+        </div>
+        <a class="btn" href="https://produccion-diaria.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir Formulario</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <p class="tag">Inventarios</p>
+          <h2>Maestro de Inventarios</h2>
+          <p>Administración y consulta del maestro general de inventarios de productos.</p>
+        </div>
+        <a class="btn" href="https://maestroo-de-inventarios.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir Formulario</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <p class="tag">Control de tiempos</p>
+          <h2>Cronómetro Amasadoras</h2>
+          <p>Herramienta de cronometraje para control de ciclos y tiempos de amasadoras.</p>
+        </div>
+        <a class="btn" href="https://pdt-frontend.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir App</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <p class="tag">Lote diario</p>
+          <h2>AppWeb para medir lote diario. Bello Campo</h2>
+          <p>Aplicación para la medición y control del lote diario en la sede Bello Campo.</p>
+        </div>
+        <a class="btn" href="https://centro-caracas.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir AppWeb</a>
+      </article>
+
+      <article class="card">
+        <div>
+          <p class="tag">Lote</p>
+          <h2>AppWeb para medir lote. Lechería</h2>
+          <p>Aplicación para medición de lote en la sede Lechería.</p>
+        </div>
+        <a class="btn" href="https://centro-lecheria.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir AppWeb</a>
+      </article>
+    </main>
+
+    <footer class="footer">Elaborado por el pasante de producción Gerardo Siblesz · Actualizado: marzo 2026</footer>
+  </div>
+</body>
+</html>
